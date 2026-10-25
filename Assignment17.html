@@ -1,0 +1,159 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Job Application Form</h1>
+        <p>Please complete the form to apply for a position.</p>
+    </header>
+
+    <hr>
+
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname"
+                       placeholder="Enter your full name" required>
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"
+                       placeholder="example@email.com" required>
+                <br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Enter phone number" required>
+                <br><br>
+
+                <label for="password">Create Password:</label><br>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob">
+                <br><br>
+
+                <label for="website">Portfolio Website:</label><br>
+                <input type="url" id="website" name="website"
+                       placeholder="https://example.com">
+                <br><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Job Preferences</legend>
+
+                <label for="position">Position Applied For:</label><br>
+                <select id="position" name="position" required>
+                    <option value="">-- Select Position --</option>
+                    <option value="web-developer">Web Developer</option>
+                    <option value="software-developer">Software Developer</option>
+                    <option value="content-writer">Content Writer</option>
+                    <option value="ai-intern">AI Intern</option>
+                </select>
+                <br><br>
+
+                <p>Employment Type:</p>
+                <input type="radio" id="fulltime" name="employment"
+                       value="Full-time">
+                <label for="fulltime">Full-time</label>
+
+                <input type="radio" id="parttime" name="employment"
+                       value="Part-time">
+                <label for="parttime">Part-time</label>
+
+                <input type="radio" id="internship" name="employment"
+                       value="Internship">
+                <label for="internship">Internship</label>
+                <br><br>
+
+                <label for="salary">Expected Monthly Salary (₹):</label><br>
+                <input type="number" id="salary" name="salary"
+                       min="0" placeholder="Enter expected salary">
+                <br><br>
+
+                <label for="available">Available From:</label><br>
+                <input type="datetime-local" id="available" name="available">
+                <br><br>
+
+                <label for="experience">Years of Experience:</label><br>
+                <input type="range" id="experience" name="experience"
+                       min="0" max="20" value="0"
+                       oninput="experienceValue.value = experience.value">
+                <output id="experienceValue">0</output> years
+                <br><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Skills and Documents</legend>
+
+                <p>Select your skills:</p>
+
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>
+
+                <input type="checkbox" id="java" name="skills" value="Java">
+                <label for="java">Java</label>
+
+                <input type="checkbox" id="writing" name="skills" value="Content Writing">
+                <label for="writing">Content Writing</label>
+                <br><br>
+
+                <label for="resume">Upload Resume:</label><br>
+                <input type="file" id="resume" name="resume"
+                       accept=".pdf,.doc,.docx">
+                <br><br>
+
+                <label for="color">Choose a preferred theme color:</label><br>
+                <input type="color" id="color" name="color" value="#3366cc">
+                <br><br>
+
+                <label for="about">Tell us about yourself:</label><br>
+                <textarea id="about" name="about" rows="5" cols="35"
+                          placeholder="Write a short introduction"></textarea>
+                <br><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Confirmation</legend>
+
+                <input type="checkbox" id="confirm" name="confirm" required>
+                <label for="confirm">
+                    I confirm that the information provided is correct.
+                </label>
+                <br><br>
+
+                <button type="submit">Submit Application</button>
+                <button type="reset">Clear Form</button>
+            </fieldset>
+
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Created by Kashish Gupta | BCA AI Student</p>
+    </footer>
+
+</body>
+</html>
