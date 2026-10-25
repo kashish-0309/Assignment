@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr 50px;
+            min-height: 100vh;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background: #2563eb;
+            color: white;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #1e293b;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar p {
+            padding: 10px;
+            background: #334155;
+            border-radius: 5px;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 20px;
+            background: white;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            padding: 20px;
+            background: #dbeafe;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #1d4ed8;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #cbd5e1;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="header">
+            My Dashboard
+        </header>
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <p>Home</p>
+            <p>Analytics</p>
+            <p>Reports</p>
+            <p>Settings</p>
+        </aside>
+
+        <main class="main">
+            <h2>Dashboard Overview</h2>
+            <p>Welcome to your dashboard!</p>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>1,250</h3>
+                    <p>Total Users</p>
+                </div>
+
+                <div class="card">
+                    <h3>850</h3>
+                    <p>Visitors</p>
+                </div>
+
+                <div class="card">
+                    <h3>320</h3>
+                    <p>Orders</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            © 2026 My Dashboard
+        </footer>
+
+    </div>
+
+</body>
+</html>

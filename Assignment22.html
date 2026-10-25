@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Assignment</title>
+
+    <style>
+        /* 1. Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* 2. Element Selector */
+        body {
+            background-color: #f0f4f8;
+            margin: 20px;
+        }
+
+        /* 3. ID Selector */
+        #heading {
+            color: darkblue;
+            text-align: center;
+        }
+
+        /* 4. Class Selector */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        /* 5. Group Selector */
+        h2, p {
+            color: #333333;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">Welcome to My Web Page</h1>
+
+    <div class="card">
+        <h2>About CSS</h2>
+        <p>CSS is used to style HTML web pages.</p>
+        <p>It adds colours, spacing, and attractive designs.</p>
+        <button onclick="alert('Welcome to CSS Learning! ')">
+        Learn more
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>CSS Selectors</h2>
+        <p>Selectors help us choose HTML elements for styling.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 42 - Responsiveness Audit</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Responsive Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            padding: 20px 5%;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 60px 5%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            overflow-wrap: anywhere;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .hero img {
+            display: block;
+            width: 40%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #5b50b5;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* Content Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            min-width: 0;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            color: #5b50b5;
+        }
+
+        /* Tablet Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 40px 5%;
+                gap: 20px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 480px) {
+            .navbar ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 5%;
+            }
+
+            .hero img {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+                padding: 25px 5%;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .btn {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Responsive Web Design</h1>
+
+            <p>
+                This website is designed to work smoothly on
+                desktop, tablet, and mobile screens.
+                Its layout adjusts automatically to different
+                screen sizes.
+            </p>
+
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+
+        <img
+            src="https://placehold.co/350x250/ffffff/667eea?text=Responsive+Design"
+            alt="Responsive design illustration">
+    </section>
+
+    <section class="cards" id="about">
+
+        <div class="card">
+            <h2>About Us</h2>
+            <p>We create simple and user-friendly websites.</p>
+        </div>
+
+        <div class="card" id="services">
+            <h2>Our Services</h2>
+            <p>We develop responsive web layouts using CSS.</p>
+        </div>
+
+        <div class="card" id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: example@email.com</p>
+        </div>
+
+    </section>
+
+</body>
+</html>

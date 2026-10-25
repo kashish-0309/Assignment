@@ -1,0 +1,155 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Project</title>
+
+    <style>
+        :root {
+            --primary-color: #17365d;
+            --accent-color: #d4a373;
+            --background-color: #eef2f7;
+            --text-color: #333333;
+            --heading-size: 32px;
+            --body-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            font-size: var(--body-size);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            font-family: Georgia, serif;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: var(--heading-size);
+            text-align: center;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #555555;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 15px;
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#design">Design Choices</a>
+    </nav>
+
+    <main class="container" id="home">
+        <h1>My Web Design Project</h1>
+        <p>
+            Welcome to my web project! This page demonstrates how HTML
+            and CSS can create a clean, attractive, and responsive website.
+        </p>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                My name is Kashish. I am a BCA Artificial Intelligence
+                student who enjoys learning new technologies.
+            </p>
+        </section>
+
+        <section id="design">
+            <h2>My Design Choices</h2>
+            <p><strong>Primary colour:</strong> Dark blue (#17365d)</p>
+            <p><strong>Accent colour:</strong> Light brown (#d4a373)</p>
+            <p><strong>Background:</strong> Light grey (#eef2f7)</p>
+            <p><strong>Fonts:</strong> Georgia for headings and Arial for body text.</p>
+            <p>
+                CSS variables help maintain consistent colours and
+                font sizes throughout the website.
+            </p>
+        </section>
+
+        <p style="text-align: center;">
+            <a class="button" href="#about">Learn More</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>My Web Design Project | Created using HTML and CSS</p>
+    </footer>
+
+</body>
+</html>

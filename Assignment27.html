@@ -1,0 +1,126 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Card Designs</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #17365d;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            width: 250px;
+            padding: 25px;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .card button {
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Card 1: Rounded Blue Card */
+        .card-one {
+            background-color: #dbeafe;
+            border: 2px solid #2563eb;
+            border-radius: 20px;
+            color: #1e3a8a;
+        }
+
+        .card-one button {
+            background-color: #2563eb;
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* Card 2: Green Card */
+        .card-two {
+            background-color: #dcfce7;
+            border: 2px solid #16a34a;
+            border-radius: 5px;
+            color: #166534;
+        }
+
+        .card-two button {
+            background-color: #16a34a;
+            color: white;
+            border-radius: 20px;
+        }
+
+        /* Card 3: Dark Card */
+        .card-three {
+            background-color: #1e293b;
+            border: 2px solid #64748b;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .card-three button {
+            background-color: #fbbf24;
+            color: #1e293b;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Three Different Card Designs</h1>
+
+    <div class="container">
+
+        <div class="card card-one">
+            <h2>Blue Card</h2>
+            <p>A simple card with a light blue background and rounded corners.</p>
+            <button onclick="alert('Welcome to the Blue Card!')">Learn More</button>
+        </div>
+
+        <div class="card card-two">
+            <h2>Green Card</h2>
+            <p>A fresh green card with a different border and button style.</p>
+            <button onclick="alert('Welcome to the Green Card!')">Learn More</button>
+        </div>
+
+        <div class="card card-three">
+            <h2>Dark Card</h2>
+            <p>A modern dark card with golden buttons and curved corners.</p>
+            <button onclick="alert('Welcome to the Dark Card!')">Learn More</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

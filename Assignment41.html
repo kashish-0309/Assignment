@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 41 - Responsive Design</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            padding: 70px 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            min-height: 350px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .hero img {
+            width: 40%;
+            max-width: 350px;
+            border-radius: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #5b50b5;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Tablet Breakpoint */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px;
+            }
+
+            .navbar ul {
+                gap: 12px;
+            }
+
+            .hero {
+                padding: 40px 25px;
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero img {
+                width: 38%;
+            }
+        }
+
+        /* Mobile Breakpoint */
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px 10px;
+            }
+
+            .navbar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 35px 20px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero img {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to My Website</h1>
+            <p>
+                This is a responsive landing page created using
+                HTML, CSS, Flexbox, and media queries.
+                It adjusts to desktop, tablet, and mobile screens.
+            </p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+
+        <img
+            src="https://placehold.co/350x250/ffffff/667eea?text=Responsive+Design"
+            alt="Responsive web design illustration">
+    </section>
+
+    <section id="about" style="padding: 30px; text-align: center;">
+        <h2>About Us</h2>
+        <p>We create responsive and user-friendly websites.</p>
+    </section>
+
+    <section id="services" style="padding: 30px; text-align: center;">
+        <h2>Our Services</h2>
+        <p>Web Design | Development | Responsive Layouts</p>
+    </section>
+
+    <section id="contact" style="padding: 30px; text-align: center;">
+        <h2>Contact Us</h2>
+        <p>Email: example@email.com</p>
+    </section>
+
+</body>
+</html>

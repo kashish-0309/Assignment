@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #17365d;
+        }
+
+        .box {
+            width: 250px;
+            background-color: #d4a373;
+            padding: 30px;
+            border: 5px solid #17365d;
+            margin: 40px auto;
+        }
+
+        .content {
+            background-color: white;
+            padding: 15px;
+        }
+
+        .explanation {
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model</h1>
+    <p>Understanding the four parts of the CSS Box Model</p>
+
+    <div class="box">
+        <div class="content">
+            <strong>CONTENT</strong>
+            <p>This is the actual content area.</p>
+        </div>
+    </div>
+
+    <div class="explanation">
+        <h2>Box Model Components</h2>
+
+        <p><strong>1. Content:</strong> The actual text or information inside an element.</p>
+
+        <p><strong>2. Padding:</strong> The space between the content and the border.</p>
+
+        <p><strong>3. Border:</strong> The line surrounding the content and padding.</p>
+
+        <p><strong>4. Margin:</strong> The space outside the border.</p>
+    </div>
+
+</body>
+</html>

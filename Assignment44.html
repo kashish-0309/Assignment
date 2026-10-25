@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft - Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #172554;
+            color: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            padding: 70px 8%;
+            background-color: #eff6ff;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #172554;
+        }
+
+        .hero p {
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            padding: 25px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+        }
+
+        footer {
+            padding: 25px;
+            background-color: #172554;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WebCraft</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Build Your Digital Future</h1>
+
+            <p>
+                Create modern, beautiful, and user-friendly
+                websites using HTML and CSS.
+            </p>
+
+            <a href="#features" class="button">Explore Features</a>
+        </div>
+
+        <div>
+            <img
+                src="https://placehold.co/600x400/dbeafe/172554?text=Web+Design"
+                alt="Web design illustration">
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Our Features</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Modern Design</h3>
+                <p>Clean and attractive layouts.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Easy Navigation</h3>
+                <p>Simple and user-friendly navigation.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Creative Ideas</h3>
+                <p>Beautiful designs for digital projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="about">
+        <h2>About Us</h2>
+        <p>We create simple and attractive web experiences.</p>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 WebCraft. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

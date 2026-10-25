@@ -1,0 +1,312 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WebCraft - Responsive Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+        }
+
+        /* Navigation Bar - Flexbox */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #172554;
+            color: white;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: #93c5fd;
+        }
+
+        /* Hero Section - CSS Grid */
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            gap: 40px;
+            padding: 70px 8%;
+            background-color: #eff6ff;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #172554;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .hero-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Features Section - CSS Grid */
+        .features {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #172554;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            padding: 25px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 8%;
+            text-align: center;
+            background-color: #eff6ff;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Footer - Flexbox */
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            background-color: #172554;
+            color: white;
+            text-align: center;
+        }
+
+        /* Tablet Breakpoint */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px 5%;
+                gap: 15px;
+            }
+
+            .navbar ul {
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 50px 5%;
+                gap: 25px;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .features,
+            .about {
+                padding: 45px 5%;
+            }
+        }
+
+        /* Mobile Breakpoint */
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 35px 5%;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .hero-image img {
+                max-width: 350px;
+                margin: auto;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">WebCraft</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>Build Your Digital Future</h1>
+
+            <p>
+                Create modern, beautiful, and responsive websites
+                using HTML and CSS. Our designs work smoothly on
+                desktops, tablets, and mobile devices.
+            </p>
+
+            <a href="#features" class="button">Explore Features</a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://placehold.co/600x400/dbeafe/172554?text=Web+Design"
+                alt="Web design illustration">
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <h2 class="section-title">Our Features</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>
+                    Our website layout adjusts to different
+                    screen sizes and devices.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Modern Layout</h3>
+                <p>
+                    CSS Grid and Flexbox create clean
+                    and attractive page layouts.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Easy Navigation</h3>
+                <p>
+                    Simple navigation helps users
+                    explore the website easily.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About WebCraft</h2>
+
+        <p>
+            WebCraft focuses on creating accessible,
+            user-friendly, and responsive web experiences
+            with modern HTML and CSS techniques.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 WebCraft. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
